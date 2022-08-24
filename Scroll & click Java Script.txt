@@ -1,0 +1,40 @@
+Dimensions:
+===========
+ 
+  JavascriptExecutor js = (JavascriptExecutor)driver;
+  js.executeScript("window.scrollBy(0,1000)");
+
+
+  JavascriptExecutor js2 = (JavascriptExecutor)driver;
+  js2.executeScript("window.scrollBy(0,-1000)"); 
+
+
+Click:
+======
+
+  JavascriptExecutor j = (JavascriptExecutor) driver;
+  j.executeScript("arguments[0].click();", objname);
+
+
+Scroll:
+======
+
+   JavascriptExecutor js1 = (JavascriptExecutor) driver;
+   js1.executeScript("arguments[0].scrollIntoView();",  objname);
+
+
+Mouse Action:
+=============
+
+Actions Mouse=new Actions(driver);
+Mouse.moveToElement(Logoff).click().perform();
+
+
+ScreenShots:
+============
+
+File screenshot=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+FileUtils.copyFile(screenshot, new File("/home/sudalai/Documents/screenshot/Rctestcase1.png"));
+
+
